@@ -104,7 +104,7 @@ Retrofit的特性
  }
 ```
 第四步，建立我们的解析model
-==========
+---------------
 
 ```Java
 public class GitHubModel {
