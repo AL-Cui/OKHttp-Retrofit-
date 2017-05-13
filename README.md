@@ -24,11 +24,13 @@ Retrofit的特性
 [此博客](http://blog.csdn.net/qiang_xi/article/details/53959437)
 使用Retrofit提供的封装方法生成我们接口的实现类，这个真的很赞，不用我们自己实现，通过注解Retrofit全部帮我们自动生成好了。
 </p>
+
 三、下面我们来写一个简单的调用（GET、POST）
 =====================
 
 第一步，导入所依赖的包
 ------------
+
 <p>在你的Android studio中找到build.gradle文件，添加如下代码</p>
 
     compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
@@ -38,6 +40,7 @@ Retrofit的特性
 
 第二步，将Rest API转换为java接口
 --------------
+
     public interface GitHubService {
     
     @GET("/users/{username}")
@@ -153,7 +156,9 @@ public class GitHubModel {
 }
 ```
 <p>在解析model中我们用到了User Bean文件，用来存放从服务器中获取的数据</p>
+
 ```Java
+
 public class User {
 
     @Expose
@@ -233,11 +238,9 @@ public class User {
     private String createdAt;
     @SerializedName("updated_at")
     @Expose
-    private String updatedAt;
-    
-}
-
+    private String updatedAt;}
 省略Getter和Setter方法
+
 ```
 
 
